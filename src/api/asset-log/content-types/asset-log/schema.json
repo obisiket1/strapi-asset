@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "asset_logs",
+  "info": {
+    "singularName": "asset-log",
+    "pluralName": "asset-logs",
+    "displayName": "AssetLog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "assets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::asset.asset"
+    },
+    "time_in": {
+      "type": "datetime"
+    },
+    "time_out": {
+      "type": "datetime"
+    },
+    "duration": {
+      "type": "date"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}
